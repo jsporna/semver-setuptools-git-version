@@ -51,18 +51,14 @@ def get_version(template="{tag}.dev{sha}", starting_version="0.1.0"):
     tag = get_tag()
     if len(tag) == 0:
         version = starting_version
-        print("1", version)
     elif is_head_at_tag(tag):
         version = tag
-        print("2", version)
     else:
         sha = get_head_sha()[:8]
         version = template.format(tag=tag, sha=sha)
-        print("3", version)
 
     if is_dirty():
         version = "{version}+dirty".format(version=version)
-        print("4", version)
 
     return version
 
