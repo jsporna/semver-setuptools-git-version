@@ -14,7 +14,7 @@ setup(
     author='Jakub Spórna',
     author_email='jakub.sporna@gmail.com',
     description='Automatically set package version using git tags with semver ordering.',
-    version="0.1.1",
+    version="1.0.0",
     long_description=readme(),
     long_description_content_type='text/markdown',
     keywords='setuptools git version-control semver',
